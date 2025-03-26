@@ -120,7 +120,7 @@ button {
   */
 .banner {
   /* border: 1px solid blue; */
-  background-image: url("http://localhost:3000/images/banner.jpg");
+  background-image: url("http://shoppy-redux-react.s3-website.ap-northeast-2.amazonaws.com//images/banner.jpg");
   width: 1400px;
   height: 400px;
   text-align: center;

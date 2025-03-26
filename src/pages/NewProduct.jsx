@@ -14,9 +14,7 @@ export default function NewProduct() {
 
     const getFileName = (fileNames) => {
         setFnames(fileNames); 
-        setPreviewList(fileNames.uploadFileName);
-        // setPreview(`http://3.39.192.201:9000/${fileNames.uploadFileName}`);   
-        // console.log('NewProduct fileNames===>> ', fileNames);        
+        setPreviewList(fileNames.uploadFileName);     
     }
 
     //폼 입력시 값을 formData로 추가하는 이벤트 처리

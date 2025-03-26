@@ -6,15 +6,7 @@ export default function DetailImages({imgList}) {
         <div className="detail-images">
             <img className="detail-images holidays-notice"
                     src="/images/holidays_notice.jpg" 
-                    alt="holidays notice"  />
-            {/* {
-                imgList && imgList.map(image => (
-                    <div>
-                        <img src={image} className={className} />
-                    </div>
-                ))
-            } */}
-            
+                    alt="holidays notice"  />           
             <ImageList className="detail-images-list"
                                 imgList={imgList}/>
         </div>
