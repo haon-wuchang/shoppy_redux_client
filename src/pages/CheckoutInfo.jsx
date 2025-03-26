@@ -44,15 +44,15 @@ export default function CheckoutInfo() {
         if(!(terms1Ref.current.checked && terms2Ref.current.checked)) {
             alert("약관 동의 후 결제가 진행됩니다.");
         } 
-        // else if(member.zipcode === null) { 
-        //     alert("배송지를 추가해주세요");
-        //     setIsVisible(!isVisible);
-        //     deliveryButtonRef.current.focus();
-        //     deliveryButtonRef.current.style.outline = '3px dotted coral';
-        // } else if (detailAddressRef.current.value === "") {
-        //     alert("상세 주소를 입력해주세요");
-        //     detailAddressRef.current.focus();
-        // }
+        else if(member.zipcode === null) { 
+            alert("배송지를 추가해주세요");
+            setIsVisible(!isVisible);
+            deliveryButtonRef.current.focus();
+            deliveryButtonRef.current.style.outline = '3px dotted coral';
+        } else if (detailAddressRef.current.value === "") {
+            alert("상세 주소를 입력해주세요");
+            detailAddressRef.current.focus();
+        }
          else {
             dispatch(paymentKakaoPay(totalPrice, orderList));
         
@@ -131,7 +131,7 @@ return (
             <div className="label">이름</div>
             <div className="value">{member.name}</div>
 
-            {/* <div className="label">배송주소</div>
+            <div className="label">배송주소</div>
             {   member.zipcode ? 
                 <div className="value">
                     {member.zipcode}/{member.address}
@@ -155,7 +155,7 @@ return (
                         </>
                     }
                 </div>
-            }             */}
+            }            
 
             <div className="label">연락처</div>
             <div className="value">{member.phone}/{member.phone}</div>
@@ -168,7 +168,7 @@ return (
         </div>
         </div>
     </div>
-    {/* {isOpen && (
+    {isOpen && (
         <div>
         <DaumPostcode
             className="postmodal"
@@ -178,7 +178,7 @@ return (
             onClose={closeHandler}
         />
         </div>
-    )} */}
+    )}
 
     {/* 주문 정보 */}
     <div className="section">
